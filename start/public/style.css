@@ -61,6 +61,10 @@ a:hover {
   color: red;
 }
 
+h2 {
+  margin-bottom: 20px;
+}
+
 main {
   padding: 15px;
 }
