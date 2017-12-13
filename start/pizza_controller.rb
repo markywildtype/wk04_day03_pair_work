@@ -9,22 +9,17 @@ get('/pizzas') do
   erb(:index)
 end
 
-
-# NEW this get method
-
+# NEW
 get('/pizzas/new') do
   erb(:new)
 end
 
-
 # SHOW
-
 get('/pizzas/:id') do
   id = params[:id]
   @pizza = Pizza.find(id)
   erb(:show)
 end
-
 
 # CREATE
 post('/pizzas') do
@@ -40,13 +35,14 @@ post('/pizzas/:id/delete') do
   redirect('/pizzas')
 end
 
-
+# EDIT
 get('/pizzas/:id/edit') do
   id = params[:id]
   @pizza = Pizza.find(id)
   erb(:edit)
 end
 
+# UPDATE
 post('/pizzas/:id') do
   @pizza = Pizza.new(params)
   @pizza.update

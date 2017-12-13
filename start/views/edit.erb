@@ -1,10 +1,6 @@
-<!-- write form and then table -->
-<!-- action is the path where do we add (post); method is the html method that we use, -->
 <form action="/pizzas/<%= @pizza.id %>" method="POST">
 
-  <!-- label and table -->
   <label for="first-name-input">First name:</label>
-  <!-- input and tab -->
   <input
   id="first-name-input"
   type="text"
@@ -20,17 +16,13 @@
   value="<%= @pizza.last_name %>"
   >
 
-
-
   <label for="Topping-select">Topping-select:</label>
-  <!-- select and tab -->
   <select class="" name="topping" id="topping-select">
-    <option value="<%= @pizza.topping %>"><%= @pizza.topping %></options>
-    <option value="Pepperoni">Pepperoni</options>
-      <option value="Italian Sausage">Italian Sausage</option>
-      <option value="Mushroom">Mushroom</option>
+    <option value="Pepperoni" <%= "selected" if @pizza.topping == 'Pepperoni'%>>Pepperoni</options>
+      <option value="Italian Sausage"<%= "selected" if @pizza.topping == 'Italian Sausage'%>>Italian Sausage</option>
+      <option value="Mushroom"<%= "selected" if @pizza.topping == 'Mushroom'%>>Mushroom</option>
+      <option value="Ham and Pineapple"<%= "selected" if @pizza.topping == 'Ham and Pineapple'%>>Ham and Pineapple</option>
     </select>
-
 
     <label for="quantity-input">Quantity:</label>
     <input
@@ -41,7 +33,7 @@
     >
 
 
-    <input type="submit" name="" value="Update Order">
+    <input type="submit" name="" value="Update Order" class="submit-button">
 
 
 

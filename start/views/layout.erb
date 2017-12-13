@@ -2,17 +2,25 @@
 <html>
 <head>
   <title>Pizza Shop</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
 </head>
 <body>
-  <h1>Codeclan Pizza Shops</h1>
+  <header>
+    <img src="https://i2.wp.com/www.cicis.com/media/1243/pizza_adven_zestypepperoni.png" alt="Look at this tasty pizza. CONSUME.">
+    <h1>Pizza, by Codeclan</h1>
+  </header>
   <nav>
     <ul>
       <li><a href="/pizzas">All Orders</a></li>
       <li><a href="/pizzas/new">Order a Pizza</a></li>
     </ul>
   </nav>
-
-
-  <%= yield %>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <p>Ugly site design by Mark Blanford 2017</p>
+  </footer>
 </body>
 </html>
